@@ -6,6 +6,9 @@ on:
 jobs:
   context-testing:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [14.x, 16.x]
     steps:
       - name: Dump GitHub Context
         id: github-context
