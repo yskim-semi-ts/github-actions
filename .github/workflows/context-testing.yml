@@ -1,6 +1,7 @@
 name: Context Testing
 on:
-  push: [develop]
+  push:
+    branches: [develop]
 
 jobs:
   context-testing:
