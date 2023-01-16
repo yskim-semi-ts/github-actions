@@ -10,6 +10,14 @@ jobs:
       matrix:
         node: [14.x, 16.x]
     steps:
+      - name: Checkout to branch
+        uses: actions/checkout@v3
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Check version of node
+        run: npm --version
       - name: Dump GitHub Context
         id: github-context
         run: echo '${{ toJSON(github) }}'
