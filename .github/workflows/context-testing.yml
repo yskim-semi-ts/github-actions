@@ -25,3 +25,6 @@ jobs:
       - name: Dump Matrix Context
         id: matrix-context
         run: echo '${{ toJSON(matrix) }}'
+      - name: Dump Secrets Context
+        id: secrets-context
+        run: echo '${{ toJSON(secrets) }}'
